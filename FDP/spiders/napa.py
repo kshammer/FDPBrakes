@@ -6,6 +6,7 @@ class napa(scrapy.Spider):
     start_urls = []
 
     def __init__(self):
+        #hardcoded brake model numbers 
         writer = ["AS7051","AE727","AE771","AE7255M","AS773","AS783","AE7254M","AE754","MS7021","AE7013AM","AE728AM","MS792","AS791","AS7001","MS7009","AE7017M","AE7019M",
         "AE7027AM","MS7032","MS7039","MS7044","MAS795B","AS7048","AE7054M","AE7061AM","AE7185","MS7066","AS7064","MS7065","AE7067","AS7068","MS7069","MC7111","AE7046","MS7079",
         "AS7080","AE7024A","AE7082AM","AS7083A","AE7072AM","AE7084AM","AE7070AM","AE7045C","S7087","AE7070B","AS7089","AE7090","AE7091","MS7093","MS7096","AE7097A",
@@ -55,6 +56,3 @@ class napa(scrapy.Spider):
                 'name' : model.css('a.listing-item-title::text').extract_first(),
                 'price' : model.css('span.listing-price-value::text').extract_first(),
             }
-            #productListItemADOAD7822_203472555 > div.listing-content > div.listing-detail > div.listing-detail-item.listing-detail-item-part > div.listing-detail-text.listing-detail-text-par
-            #productListItemADOAD7822_203472555 > div.listing-aside > div.listing-price-wrap > div.listing-price-block > div.listing-price > div.listing-price-amount > span.listing-price-value
-            #productTitle
